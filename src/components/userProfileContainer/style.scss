@@ -1,0 +1,89 @@
+@import './../../index.scss';
+@import './../../mixins.scss';
+.userProfile{
+    padding: 0rem 0rem 2rem 0rem;
+    display: flex;
+    @include md{
+        padding: 3rem 0rem;
+    }
+ 
+    .container{
+        background-color: #dff2ff63;
+        padding: 2rem 0rem;
+        .wrapper{
+            display: block;
+           
+            margin: auto;
+            justify-content: center;
+            @include md{
+                display: flex;
+                max-width: 500px;
+                margin: auto;
+                justify-content: center;
+                
+            }
+         
+    .userAvatar{
+       position: relative;
+       width: 100px;
+       height: 100px;
+       border-radius: 50%;
+       overflow: hidden;
+       margin: 3% 0%;
+        img{
+            height: auto;
+            width: 100%;
+            margin: auto;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .upload-avatar-btn{
+            position: absolute;
+            right: 9px;
+            bottom: 4px;
+            border-radius: 100%;    
+            width: 27px;
+            height: 27px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9;
+            i {
+                font-size: 0.8rem;
+            }
+    }
+    }
+    .userInfo{
+        margin: 2% 0%;
+        text-align: center;
+        .user_name{
+            span{
+                color:black;
+                font-weight: 600;
+            }
+        }
+        .user_email span{
+            word-wrap: break-word;
+        }
+        @include md{
+            text-align:justify;
+            padding: 0rem 2rem;
+        }
+    }    
+   
+
+}
+    }
+}
+.error{
+    font-size: 0.9rem;
+    float: inline-end;
+}
+@media screen and (max-width:767px){
+    .userAvatar{
+        margin: 0 auto !important;
+    }
+}
